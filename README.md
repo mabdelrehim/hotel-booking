@@ -59,3 +59,6 @@ The hotel has the option to pay and be unsuspended if suspended by paying the am
 Broker page :
 The broker can see a list of all the hotels with all the money they owe him and suspend hotels that didn’t pay on due date 
 The broker can also unsuspend the hotels 
+
+
+## There are some design flaws in this er-diagram design that my instructor noted. There are some relationships that can be omitted and replaced by attributes and some of the relationships will lead to the possibility of spurious tuples.
