@@ -1,0 +1,125 @@
+body{
+background-color: #F4F4F4;
+font-size: 16px;
+}
+
+.login{
+
+	width: 300px;
+	margin:100px auto;
+}
+.login input {
+
+	margin-bottom: 10px;
+}
+.login .form-control{
+background-color:#E5E5E5;
+}
+h4{
+	color: #888;
+}
+/* Bootsstrap */
+.navbar {
+	border-radius: 0;
+	margin-bottom: 0;
+}
+
+.nav > li >a,
+.navbar-brand{
+	padding: 15px 12px;
+}
+.navbar-brand{
+	font-size:1em;
+}
+.navbar-inverse .navbar-nav > .open>a,
+.navbar-inverse .navbar-nav > .open>a:focus,
+.navbar-inverse .navbar-nav > .open>a:hover,
+.dropdown-menu{
+	background-color: #3498db;
+}
+.dropdown-menu > li > a {
+	color: #FFF;
+	padding: 10px 15px;
+}
+
+.show-pass {
+
+	position: absolute;
+	top: 6px;
+	right: -30px
+}
+
+
+
+h1 {
+	font-size: 45px;
+	margin: 20px 0;
+	font-weight: bold;
+	color: #666;
+
+}
+.main-table tr:first-child td { /* You Can Use Thead */
+	background-color: #333;
+	color: #FFF;
+}
+
+.label1{
+
+	margin-left: 30px;
+	margin-bottom: 20px;
+}
+.option1{
+
+	margin-left: 30px;
+	width: 90%;
+}
+.btn3{
+
+	margin-left: 30px;
+	margin-top: 20px;
+}
+#loginpage{
+background: url(7.jpg) no-repeat center center fixed;
+   
+    background-size:cover;
+      
+
+
+}
+
+#formm {
+    width: 300px;
+    position: relative;
+    left:500px;
+    border-radius: 15px;
+    height: 200px;
+    z-index: 1;
+    
+}
+.sign{
+          width: 141px;
+    position: relative;
+    top: 22px;
+    left: 160px;
+    z-index: 2;
+}
+.sign1{
+       width: 159px;
+    position: relative;
+    top: -13px;
+    z-index: 2;
+
+}
+.loginn{
+       position: relative;
+    top: -10px;
+}
+.bla{
+    background-color: #d9534f;
+        border-radius: 10px;
+    width: 300px;
+    padding: 5px;
+    position: relative;
+    bottom: 10px;
+
+}

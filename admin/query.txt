@@ -1,0 +1,44 @@
+SELECT * FROM reservations, rooms
+WHERE rooms.roomId NOT IN
+           ( SELECT
+			       rooms.roomId
+			FROM rooms
+				LEFT JOIN reservations ON rooms.roomId = reservations.roomId
+			WHERE
+				<>((reservations.`roomId` IS NULL OR reservations.isCancelled = 1) OR
+
+				    ((reservations.`fromDate` > 2018-2-3 AND reservations.`fromDate` > 2018-2-4) OR (reservations.`toDate` < 2018-2-3 AND reservations.`toDate` < 2018-2-4)))
+
+
+
+
+
+<>( (reservations.`fromDate` > 2018-2-3 AND reservations.`fromDate` > 2018-2-4) OR (reservations.`toDate` < 2018-2-3 AND reservations.`toDate` < 2018-2-4) ) )
+
+
+
+
+
+
+
+SELECT
+	*
+FROM
+	hotel
+    LEFT JOIN rooms on rooms.offeringHotelId = hotel.hotelId
+    LEFT JOIN reservations ON reservations.roomId = rooms.roomId
+    LEFT JOIN suspendedHotelAccounts ON suspendedHotelAccounts.suspendedHotelId = hotel.hotelId
+    LEFT JOIN pendingHotelAccounts ON pendingHotelAccounts.pendingHotelId = hotel.hotelId
+    LEFT JOIN suspendedHotelAccounts ON suspendedHotelAccounts.suspendedHotelId = hotel.hotelId
+WHERE
+	(rooms.roomId != ALL (SELECT
+                         	roomId
+                         FROM
+                         	rooms INNER JOIN reservations ON rooms.roomId = reservations.roomId
+                         WHERE
+                        	(reservations.fromDate > myStart AND reservations.fromDate < myEnd)
+                        	OR (reservations.toDate > myStart AND reservations.toDate < myEnd)
+                        	OR (reservations.fromDate < myStart AND reservations.endDate > myEnd))
+     OR reservations.roomId IS NULL OR reservations.isCancelled = 1)
+     AND suspendedHotelAccounts.suspendedHotelId IS NULL AND
+	 pendingHotelAccounts.pendingHotelId IS NULL;
