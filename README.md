@@ -61,4 +61,4 @@ The broker can see a list of all the hotels with all the money they owe him and 
 The broker can also unsuspend the hotels 
 
 
-## There are some design flaws in this er-diagram design that my instructor noted. There are some relationships that can be omitted and replaced by attributes and some of the relationships will lead to the possibility of spurious tuples.
+### There are some design flaws in this er-diagram design that my instructor noted. There are some relationships that can be omitted and replaced by attributes and some of the relationships will lead to the possibility of spurious tuples (the "in" and the "to" relationships. See the image file of the er-digram for more details on the design).
